@@ -19,12 +19,14 @@ def creation(name):
                 'CodigoBanco',
                 'CodigoScurusal',
                 'NumeroCuentaOrigen',
+                'NumeroCuentaDestino',
                 'Valor',
                 'FechaOrigen',
                 'FechaPago',
                 'DNI',
-                'Estado',
-                'Tipo'])
+                'Tipo',
+                'Estado'
+                ])
             archivo.close()
             print('created successfully')
             return {'created':True,'stop':False}
