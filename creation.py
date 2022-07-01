@@ -1,5 +1,5 @@
 import csv
-
+import data.constant as constantes
 def creation(name):
     try:
         with open(f'{name}.csv') as archivo:
@@ -14,19 +14,7 @@ def creation(name):
     except:
         print('creating...')
         with open(f'{name}.csv','w',newline='') as archivo:
-            csv.writer(archivo).writerow([
-                'NroCheque',
-                'CodigoBanco',
-                'CodigoScurusal',
-                'NumeroCuentaOrigen',
-                'NumeroCuentaDestino',
-                'Valor',
-                'FechaOrigen',
-                'FechaPago',
-                'DNI',
-                'Tipo',
-                'Estado'
-                ])
+            csv.writer(archivo).writerow(constantes.row_info)
             archivo.close()
             print('created successfully')
             return {'created':True,'stop':False}
