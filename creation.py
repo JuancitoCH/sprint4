@@ -15,7 +15,6 @@ def creation(name):
         print('creating...')
         with open(f'{name}.csv','w',newline='') as archivo:
             csv.writer(archivo).writerow([
-                '',
                 'NroCheque',
                 'CodigoBanco',
                 'CodigoScurusal',
